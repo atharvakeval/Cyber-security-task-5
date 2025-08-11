@@ -1,18 +1,20 @@
-Wireshark Packet Capture Report
+# Wireshark Report Summary
 
-Tool Used:
-- Wireshark (Latest Version)
+## Protocols Observed
+- **DNS**: Domain name resolution queries and responses.
+- **TCP**: Three-way handshake and HTTP communication.
+- **HTTP**: GET requests to websites.
 
-Protocols Observed:
-1. DNS – Used for domain name resolution.
-2. HTTP – Shows web traffic to and from visited sites.
-3. TCP – Underlying protocol for reliable communication.
-  
-  Key Observations:
-- DNS packets showed lookups for websites I visited.
-- HTTP packets contained GET and POST requests to web servers.
-- TCP handshake (SYN, SYN-ACK, ACK) was visible for multiple sessions.
+## Observations
+- DNS queries resolved domain names successfully.
+- TCP handshake completed without issues.
+- HTTP traffic included standard GET requests.
 
+## Possible Risks
+- If unencrypted HTTP is used, sensitive data could be intercepted.
+- Open ports visible from capture could be exploited.
 
-Conclusion:
-Packet capture helps understand how data flows over the network. It is also a valuable method for detecting unusual or malicious activity.
+## Recommendations
+- Prefer HTTPS over HTTP.
+- Restrict unnecessary open ports.
+- Monitor DNS queries for unusual activity.
